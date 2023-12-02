@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-menu></app-menu>
+    
+    <div class="content">
+        <div class="border">
+    
+            <div class="senha">
+                <p class="senha-gerador" id="senha_p">sa3239!/'</p>
+            </div>
+            
+            
+            <div class="tmh_senha">
+                <input type="range" id="num_real" name="peso" min="6" max="16" step="1.0">
+    
+                <p id="num">12</p>
+            </div>
+    
+            <div class="propriedades">
+                <div class="propriedade"><input type="checkbox" class="propriedade1"> <p>Letras Minúsculas</p></div>
+                <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Letras Maiúsculas</p></div>
+                <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Números</p></div>
+                <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Símbolos</p></div>
+            </div>
+    
+            <div class="botao">
+                <button onclick="getPassword()">Gerar</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/tmh_senha.js"></script>
+    
+</body>
+</html>

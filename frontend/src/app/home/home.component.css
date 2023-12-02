@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
+
+
+
+body {
+    color: #333;
+    width: 100%;
+    height: 100%; 
+    font-family: 'Inter', sans-serif;
+    
+    background-color: #b4d4cc;
+}
+
+
+.content {
+    
+    background-color: #b4d4cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    flex-direction: column;
+    width: 100%;
+    
+    
+}
+.propriedade{
+    display: flex;
+}
+
+.border{
+    background-color: #f3f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #999999;
+    border-radius: 10px;
+    box-shadow: 1px 5px 20px #72a799;
+    width: 450px;
+    height: 60%;
+    margin-top: 60px;
+    
+}
+
+.senha{
+    background-color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top:2%;
+    margin-bottom: 5%;
+    width: 70%;
+    border: 2px solid #999999;
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+.senha-gerador {
+    color: rgb(85, 85, 85);
+
+}
+
+.tmh_senha{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.tmh_senha input{
+    width: 80%;
+    margin-right: 3%;
+}
+
+.propriedades{
+    width: 70%;
+    font-size: 20px;
+    
+    margin-bottom: 6%;
+}
+
+.propriedades input{
+    width: 20px;
+    
+}
+.propriedade{
+    margin-top: 10px;
+}
+.propriedade p{
+    margin-left: 5%;
+}
+button {
+    margin: 5px;
+    width: 180px;
+    height: 40px;
+    background-color: #333; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+button:hover {
+    background-color: rgb(79, 82, 82);
+}

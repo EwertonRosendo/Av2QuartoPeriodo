@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
+
+
+body {
+    width: 100%;
+    height: 100%; 
+    font-family: 'Inter', sans-serif;
+    background-color: #b4d4cc;
+}
+
+.content{
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.title-h1 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: rgb(85, 85, 85);
+    margin-bottom: 15px;
+    font-size: 20px;
+    
+}
+
+.bloco {
+    margin-bottom: 10px;
+    color: rgb(85, 85, 85);
+}
+
+.linha{
+    background-color: #bebebe;
+    width: 100%;
+    height: 2px;
+}
+.rua {
+    margin-top: 10px;
+}
+
+.diviframe{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;  
+      
+}
+iframe{
+    border-radius: 15px;
+}
+.rua{
+    margin-bottom: 7px;
+}
