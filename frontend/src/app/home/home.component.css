@@ -53,14 +53,14 @@ body {
     
     background-color: #b4d4cc;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: 80vh;
-    flex-direction: column;
+    height: 80vh;    
     width: 100%;
     
     
 }
+
 .propriedade{
     display: flex;
 }
@@ -78,6 +78,23 @@ body {
     height: 60%;
     margin-top: 60px;
     
+}
+.border2{
+    background-color: #f3f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid #999999;
+    border-radius: 10px;
+    box-shadow: 1px 5px 20px #72a799;
+    width: 450px;
+    height: 60%;
+    margin-top: 60px;
+    
+}
+h1doform{
+    height:50% ;
 }
 
 .senha{
@@ -127,6 +144,68 @@ body {
 .propriedade p{
     margin-left: 5%;
 }
+
+label{
+    width: 50%;
+}
+
+.form-control{
+    width: 50%; 
+}
+.form-group{
+    display: flex;
+    margin-top:5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.escolha{
+    margin-top:20% ;
+    display: flex;
+    justify-content: space-around;
+}
+.Salvo{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: black; 
+    color: #fff; 
+    cursor: pointer;
+}
+.Salvo:hover{
+    background-color: rgb(79, 82, 82);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
+}
+.Cancelo{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: black; 
+    color: #fff; 
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+}
+.Cancelo:hover{
+    background-color: rgb(79, 82, 82);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
+}
+
+.tabela{
+    background-color:#9b9797;
+    color: #fff;
+    width:70%;
+}
+.centralizaessacoisa{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 button {
     margin: 5px;
     width: 180px;
@@ -143,4 +222,6 @@ button {
 
 button:hover {
     background-color: rgb(79, 82, 82);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
 }

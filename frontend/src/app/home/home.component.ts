@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, numberAttribute } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {Passwords} from "../models/passwords";
 import {User} from "../models/user";
@@ -14,10 +14,17 @@ export class HomeComponent implements OnInit {
   formPasswords: FormGroup = new FormGroup({});
   formUser: FormGroup = new FormGroup({});
 
+  //abaixo a lista dois do ngfor
+  litadois: number[] = [1,2,3,4];
+  //abaixo a lista um do ngfor
+  litaums: string[] = ["1","2","3","4","5"];
+  //capelas é apenas para dizer que usamos ngif
+  capelas: string[] = ["um","dois"];
 
   constructor(private formBuilder: FormBuilder, private passService: PasswordsService) { }
-
+  
   ngOnInit() {
+    
     this.createFormPassword(new Passwords());
     this.createFormUser(new User());
     this.getPasswords();

@@ -15,91 +15,134 @@
     </Header>
     
     <div class="content">
-        <div class="border">
+      <div class="content">
+        <div class="border2">
     
-            <div class="senha">
-                <p class="senha-gerador" id="senha_p">sa3239!/'</p>
-            </div>
+          <div class="senha">
+              <p class="senha-gerador" id="senha_p">semvariavel</p>
+          </div>
+          
+          
+          <div class="tmh_senha">
+              <input type="range" id="num_real" name="peso" min="6" max="16" step="1.0">
+  
+              <p id="num">12</p>
+          </div>
+  
+          <div class="propriedades">
+              <div class="propriedade"><input type="checkbox" class="propriedade1"> <p>Letras Minúsculas</p></div>
+              <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Letras Maiúsculas</p></div>
+              <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Números</p></div>
+              <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Símbolos</p></div>
+          </div>
+  
+          <div class="botao">
+              <button onclick="getPassword()">Gerar</button>
+          </div>
+      </div>
+      </div>
+        
+
+        <div class="content">
+          <div class="border2">
+            <h1 class="h1doform">Guardar Usuario</h1>
+            <form [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
+              
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" formControlName="username">
+              </div>
+      
+              <div class="form-group">
+                  <label for="passwordUser">Senha do Usuario</label>
+                  <input type="text" class="form-control" name="passwordUser" id="passwordUser" formControlName="passwordUser">
+                </div>
+      
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" name="email" id="email" formControlName="email">
+                </div>
             
+              
+                <div class="escolha">
+                  <input type="submit" class="Salvo" value="Salvar">
+                  <a href="#" class="Cancelo">Cancelar</a>
+                </div>
+              
             
-            <div class="tmh_senha">
-                <input type="range" id="num_real" name="peso" min="6" max="16" step="1.0">
+            </form>
+          </div>
+        
+        </div>  
+      <div class="content">
+        <div class="border2">
+          <h1 class="h1doform">Gerador de Senha</h1>
+
+          <form [formGroup]="formPasswords" (ngSubmit)="onSubmitPassword()">
+
+              <div class="form-group">
+                <label for="lenghtPassword">Tamanho da Senha</label>
+                <input type="text" class="form-control" name="lenghtPassword" id="lenghtPassword" formControlName="lenghtPassword">
+              </div>
     
-                <p id="num">12</p>
-            </div>
+             <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="text" class="form-control" name="password" id="password" formControlName="password">
+              </div>
     
-            <div class="propriedades">
-                <div class="propriedade"><input type="checkbox" class="propriedade1"> <p>Letras Minúsculas</p></div>
-                <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Letras Maiúsculas</p></div>
-                <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Números</p></div>
-                <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Símbolos</p></div>
-            </div>
-    
-            <div class="botao">
-                <button onclick="getPassword()">Gerar</button>
-            </div>
+              <div class="form-group">
+                <label for="user_id">Usuario</label>
+                <input type="user_id" class="form-control" name="user_id" id="user_id" formControlName="user_id">
+              </div>
+          
+              <div class="escolha">
+                <input type="submit" class="Salvo" value="Salvar">
+                <a href="#" class="Cancelo">Cancelar</a>
+              </div>
+        
+         </form>
         </div>
+        
+      </div> 
+    </div>
+    /*tabela 1 */
+    <div class="centralizaessacoisa">
+      <table class="tabela" >
+        <tr *ngIf="capelas.length > 0">
+          <th>Usuario</th>
+          <th>Senha</th>
+          <th>Tamanho da senha</th>
+        </tr>
+        <tr *ngFor="let litaum of litaums">
+          <td>***</td>
+          <td>***</td>
+          <td>***</td>
+        </tr>
+        
+      </table>
+  
+      /*tabela 2 */
+      <table class="tabela" >
+        <tr>
+          <th>Username</th>
+          <th>Senha do Usuario</th>
+          <th>Email</th>
+        </tr>
+        <tr *ngFor="let litadoi of litadois">
+          <td>pegou for</td>
+          <td>pegou for</td>
+          <td>pegou for</td>
+        </tr>
+      </table>
+      
     </div>
     
-    /*
-        form da senha  aqui embaixo
-      */
-    <form [formGroup]="formPasswords" (ngSubmit)="onSubmitPassword()">
+    
+ 
 
-        <div class="form-group">
-          <label for="lenghtPassword">lenghtPassword</label>
-          <input type="text" class="form-control" name="lenghtPassword" id="lenghtPassword" formControlName="lenghtPassword">
-        </div>
-
-        <div class="form-group">
-            <label for="password">password</label>
-            <input type="text" class="form-control" name="password" id="password" formControlName="password">
-          </div>
-
-          <div class="form-group">
-            <label for="user_id">user_id</label>
-            <input type="user_id" class="form-control" name="user_id" id="user_id" formControlName="user_id">
-          </div>
-      
-        
-      
-        <input type="submit" class="btn btn-primary mt-4" value="Salvar">
-        <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
-      
-      </form>
-      <br><br><br><br><br><br><br><br><br>
-      /*
-      aqui é o meio
-    */
-      <form [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
-
-        <div class="form-group">
-          <label for="username">username</label>
-          <input type="text" class="form-control" name="username" id="username" formControlName="username">
-        </div>
-
-        <div class="form-group">
-            <label for="passwordUser">passwordUser</label>
-            <input type="text" class="form-control" name="passwordUser" id="passwordUser" formControlName="passwordUser">
-          </div>
-
-          <div class="form-group">
-            <label for="email">email</label>
-            <input type="email" class="form-control" name="email" id="email" formControlName="email">
-          </div>
-      
-        
-      
-        <input type="submit" class="btn btn-primary mt-4" value="Salvar">
-        <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
-      
-      </form>
-      
-
-      /*
-        form do username aqui de cima
-      */
-
+         
+  
+    
     <script src="scripts/scripts.js"></script>
     <script src="scripts/tmh_senha.js"></script>
     
