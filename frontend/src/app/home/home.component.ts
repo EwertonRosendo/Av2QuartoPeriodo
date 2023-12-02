@@ -13,7 +13,12 @@ export class HomeComponent implements OnInit {
 
   formPasswords: FormGroup = new FormGroup({});
   formUser: FormGroup = new FormGroup({});
-  tabelas: number[] = [1,2,3,4];
+
+  //abaixo a lista dois do ngfor
+  litadois: number[] = [1,2,3,4];
+  //abaixo a lista um do ngfor
+  litaums: string[] = ["1","2","3","4","5"];
+  //capelas é apenas para dizer que usamos ngif
   capelas: string[] = ["um","dois"];
 
   constructor(private formBuilder: FormBuilder, private passService: PasswordsService) { }

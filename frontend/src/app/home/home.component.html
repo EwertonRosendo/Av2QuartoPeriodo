@@ -108,21 +108,17 @@
     /*tabela 1 */
     <div class="centralizaessacoisa">
       <table class="tabela" >
-        <tr>
+        <tr *ngIf="capelas.length > 0">
           <th>Usuario</th>
           <th>Senha</th>
           <th>Tamanho da senha</th>
         </tr>
-        <tr>
+        <tr *ngFor="let litaum of litaums">
           <td>***</td>
           <td>***</td>
           <td>***</td>
         </tr>
-        <tr *ngIf="capelas.length > 0">
-          <td>pegouif</td>
-          <td>pegouif</td>
-          <td>pegouif</td>
-        </tr>
+        
       </table>
   
       /*tabela 2 */
@@ -132,7 +128,7 @@
           <th>Senha do Usuario</th>
           <th>Email</th>
         </tr>
-        <tr *ngFor="let tabela of tabelas">
+        <tr *ngFor="let litadoi of litadois">
           <td>pegou for</td>
           <td>pegou for</td>
           <td>pegou for</td>
