@@ -40,9 +40,11 @@
             </div>
         </div>
     </div>
-
-
-    <form [formGroup]="formPasswords" (ngSubmit)="onSubmit()">
+    
+    /*
+        form da senha  aqui embaixo
+      */
+    <form [formGroup]="formPasswords" (ngSubmit)="onSubmitPassword()">
 
         <div class="form-group">
           <label for="lenghtPassword">lenghtPassword</label>
@@ -65,7 +67,39 @@
         <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
       
       </form>
-    
+      <br><br><br><br><br><br><br><br><br>
+      /*
+      aqui é o meio
+    */
+      <form [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
+
+        <div class="form-group">
+          <label for="username">username</label>
+          <input type="text" class="form-control" name="username" id="username" formControlName="username">
+        </div>
+
+        <div class="form-group">
+            <label for="passwordUser">passwordUser</label>
+            <input type="text" class="form-control" name="passwordUser" id="passwordUser" formControlName="passwordUser">
+          </div>
+
+          <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" class="form-control" name="email" id="email" formControlName="email">
+          </div>
+      
+        
+      
+        <input type="submit" class="btn btn-primary mt-4" value="Salvar">
+        <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
+      
+      </form>
+      
+
+      /*
+        form do username aqui de cima
+      */
+
     <script src="scripts/scripts.js"></script>
     <script src="scripts/tmh_senha.js"></script>
     
