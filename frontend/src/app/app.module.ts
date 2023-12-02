@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LocalizacaoComponent } from './localizacao/localizacao.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { CamelCasePipe } from './camel-case.pipe';
+import { LowerPipe } from './lower.pipe';
 
 
 
@@ -18,6 +20,8 @@ import { SobreComponent } from './sobre/sobre.component';
     HomeComponent,
     LocalizacaoComponent,
     SobreComponent,
+    CamelCasePipe,
+    LowerPipe,
     
     
   ],

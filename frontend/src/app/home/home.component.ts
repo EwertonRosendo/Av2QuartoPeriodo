@@ -11,6 +11,14 @@ import {PasswordsService} from "../services/passwords.service";
 })
 export class HomeComponent implements OnInit {
 
+   texto: any = {
+    frase: 'cancelar'
+   };
+
+   textodois: any = {
+    frase: 'SALVAR'
+   };
+
   formPasswords: FormGroup = new FormGroup({});
   formUser: FormGroup = new FormGroup({});
 
