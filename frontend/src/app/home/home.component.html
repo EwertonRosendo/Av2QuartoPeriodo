@@ -118,6 +118,11 @@
           <td>***</td>
           <td>***</td>
         </tr>
+        <tr *ngIf="capelas.length > 0">
+          <td>pegouif</td>
+          <td>pegouif</td>
+          <td>pegouif</td>
+        </tr>
       </table>
   
       /*tabela 2 */
@@ -127,10 +132,10 @@
           <th>Senha do Usuario</th>
           <th>Email</th>
         </tr>
-        <tr>
-          <td>dado</td>
-          <td>dado</td>
-          <td>dado</td>
+        <tr *ngFor="let tabela of tabelas">
+          <td>pegou for</td>
+          <td>pegou for</td>
+          <td>pegou for</td>
         </tr>
       </table>
       
