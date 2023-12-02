@@ -21,6 +21,10 @@ export class HomeComponent implements OnInit {
   //capelas é apenas para dizer que usamos ngif
   capelas: string[] = ["um","dois"];
 
+  listUsers:[] = [];
+
+  listPassword:[] = [];
+
   constructor(private formBuilder: FormBuilder, private passService: PasswordsService) { }
   
   ngOnInit() {
@@ -82,7 +86,10 @@ export class HomeComponent implements OnInit {
   getPasswords() {
     this.passService.getPassword().subscribe(
       (response) => {
-        console.log('Senha(s) obtida(s) com sucesso', response);
+        
+        this.listPassword = response.passwords;
+        console.log('Senha(s) obtida(s) com sucesso', this.listPassword);
+
         // Faça algo com a resposta aqui, por exemplo, atribuir a uma propriedade do componente
       },
       (error) => {
@@ -91,7 +98,9 @@ export class HomeComponent implements OnInit {
     );
     this.passService.getUser().subscribe(
       (response) => {
-        console.log('Usuário(s) obtido(s) com sucesso', response);
+        
+        this.listUsers = response.users;
+        console.log('Usuário(s) obtido(s) com sucesso', this.listUsers);
         // Faça algo com a resposta aqui, por exemplo, atribuir a uma propriedade do componente
       },
       (error) => {

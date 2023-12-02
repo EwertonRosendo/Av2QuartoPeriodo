@@ -107,18 +107,17 @@
     </div>
     /*tabela 1 */
     <div class="centralizaessacoisa">
-      <table class="tabela" >
-        <tr *ngIf="capelas.length > 0">
-          <th>Usuario</th>
+      <table class="tabela">
+        <tr *ngIf="listPassword.length > 0">
+          <th>Usuário</th>
           <th>Senha</th>
           <th>Tamanho da senha</th>
         </tr>
-        <tr *ngFor="let litaum of litaums">
-          <td>***</td>
-          <td>***</td>
-          <td>***</td>
+        <tr *ngFor="let password of listPassword">
+          <td>{{password['user_id']}}</td>
+          <td>{{password['password']}}</td>
+          <td>{{password['lenght']}}</td>
         </tr>
-        
       </table>
   
       /*tabela 2 */
@@ -128,10 +127,10 @@
           <th>Senha do Usuario</th>
           <th>Email</th>
         </tr>
-        <tr *ngFor="let litadoi of litadois">
-          <td>pegou for</td>
-          <td>pegou for</td>
-          <td>pegou for</td>
+        <tr *ngFor="let user of listUsers">
+          <td>{{user['id']}}</td>
+          <td>{{user['password']}}</td>
+          <td>{{user['email']}}</td>
         </tr>
       </table>
       

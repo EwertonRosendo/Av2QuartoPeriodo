@@ -83,7 +83,7 @@ class PasswordView(APIView):
             
         ]}
         for password in passwords:
-            data['passwords'].append({'user_id':password.user_id, 'password':password.password})
+            data['passwords'].append({'user_id':password.user_id, 'password':password.password, 'lenght':password.lenghtPassword})
 
         return Response(data)
     #insert into passwords (user_id, lenghtPassword, password) values (?, ?, ?)
