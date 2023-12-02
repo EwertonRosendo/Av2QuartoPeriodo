@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
   capelas: string[] = ["um","dois"];
 
   listUsers:[] = [];
+  pUser: number = 1;
+  pPass: number = 1;
 
   listPassword:[] = [];
 

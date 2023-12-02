@@ -82,12 +82,13 @@
           <th>Senha</th>
           <th>Tamanho da senha</th>
         </tr>
-        <tr *ngFor="let password of listPassword">
+        <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 4, currentPage: pPass } ">
           <td>{{password['user_id']}}</td>
           <td>{{password['password']}}</td>
           <td>{{password['lenght']}}</td>
         </tr>
       </table>
+      <pagination-controls (pageChange)="pPass = $event"></pagination-controls>
   <br>
       
       <table class="tabela" >
@@ -96,12 +97,13 @@
           <th>Senha do Usuario</th>
           <th>Email</th>
         </tr>
-        <tr *ngFor="let user of listUsers">
+        <tr *ngFor="let user of listUsers | paginate: { itemsPerPage: 2, currentPage: pUser }">
           <td>{{user['id']}}</td>
           <td>{{user['password']}}</td>
           <td>{{user['email']}}</td>
         </tr>
       </table>
+      <pagination-controls (pageChange)="pUser = $event"></pagination-controls>
       
     </div>
     

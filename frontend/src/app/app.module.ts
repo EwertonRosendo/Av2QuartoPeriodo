@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LocalizacaoComponent } from './localizacao/localizacao.component';
 import { SobreComponent } from './sobre/sobre.component';
+
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { SobreComponent } from './sobre/sobre.component';
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
     
   ],
   providers: [],
