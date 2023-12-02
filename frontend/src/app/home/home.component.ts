@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import {Cliente} from "../clientes/shared/cliente"
+import {Passwords} from "../models/passwords";
+import {PasswordsService} from "../services/passwords.service";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,29 +9,31 @@ import {Cliente} from "../clientes/shared/cliente"
 })
 export class HomeComponent implements OnInit {
 
-  formCliente: FormGroup = new FormGroup({});
+  formPasswords: FormGroup = new FormGroup({});
 
-  constructor(private formBuilder: FormBuilder) { }
+
+  constructor(private formBuilder: FormBuilder, private passService: PasswordsService) { }
 
   ngOnInit() {
-    this.createForm(new Cliente());
+    this.createForm(new Passwords());
   }
 
-  createForm(cliente: Cliente) {
-    this.formCliente = this.formBuilder.group({
-      nome: [cliente.nome],
-      tipo: [cliente.tipo],
-      genero: [cliente.genero],
-      observacao: [cliente.observacao],
-      inativo: [cliente.inativo]
+  createForm(passwords: Passwords) {
+    this.formPasswords = this.formBuilder.group({
+      lenghtPassword: [passwords.lenghtPassword],
+      password: [passwords.password],
+      user_id: [passwords.user_id],
+      
     })
   }
   onSubmit() {
     // aqui você pode implementar a logica para fazer seu formulário salvar
-    console.log(this.formCliente.value);
+    //this.passService.postPassword(parseInt(this.formPasswords.value.user_id), parseInt(this.formPasswords.value.lenghtPassword));
+    this.passService.postPassword(10, 10);
+    console.log(this.formPasswords.value);
   
     // chamando a função createForm para limpar os campos na tela
-    this.createForm(new Cliente());
+    this.createForm(new Passwords());
   }
 
 

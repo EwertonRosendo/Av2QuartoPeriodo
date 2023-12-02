@@ -1,3 +1,4 @@
 django
 djangorestframework
 random-password-generator
+django-cors-headers

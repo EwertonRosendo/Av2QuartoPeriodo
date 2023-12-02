@@ -104,22 +104,3 @@ class PasswordView(APIView):
             data = {'password':password, 'status':'deu bom'}
             serializer.save()
             return Response(data)
-    """# select * from passwords where id = ?
-    @extend_schema(responses=PasswordSerializer)
-    def put(self, request, *args, **kwargs):
-        password_id = kwargs.get('pk')
-        password = get_object_or_404(Password, id=password_id)
-        serializer = PasswordSerializer(instance=password, data=request.data)
-        
-        if serializer.is_valid():
-            serializer.save()
-            return Response({'status': 'Senha atualizada com sucesso'})
-        
-        return Response({'error': 'Erro na atualização da senha'})
-
-    # delete from passwords where id = ?
-    @extend_schema(responses=PasswordSerializer)
-    def delete(self, request, id, *args, **kwargs):
-        data = PasswordSerializer.objects.get(id=id)
-        data.delete()
-        return Response({'status':'deletado com sucesso'}, status=status.HTTP_202_ACCEPTED)"""
