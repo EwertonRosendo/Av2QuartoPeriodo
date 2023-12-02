@@ -14,35 +14,7 @@
         </div>
     </Header>
     
-    <div class="content">
-      <div class="content">
-        <div class="border2">
-    
-          <div class="senha">
-              <p class="senha-gerador" id="senha_p">semvariavel</p>
-          </div>
-          
-          
-          <div class="tmh_senha">
-              <input type="range" id="num_real" name="peso" min="6" max="16" step="1.0">
-  
-              <p id="num">12</p>
-          </div>
-  
-          <div class="propriedades">
-              <div class="propriedade"><input type="checkbox" class="propriedade1"> <p>Letras Minúsculas</p></div>
-              <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Letras Maiúsculas</p></div>
-              <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Números</p></div>
-              <div class="propriedade"><input type="checkbox" class="propriedade1"><p>Símbolos</p></div>
-          </div>
-  
-          <div class="botao">
-              <button onclick="getPassword()">Gerar</button>
-          </div>
-      </div>
-      </div>
-        
-
+    <div class="content"> 
         <div class="content">
           <div class="border2">
             <h1 class="h1doform">Guardar Usuario</h1>
@@ -85,10 +57,7 @@
                 <input type="text" class="form-control" name="lenghtPassword" id="lenghtPassword" formControlName="lenghtPassword">
               </div>
     
-             <div class="form-group">
-                <label for="password">Senha</label>
-                <input type="text" class="form-control" name="password" id="password" formControlName="password">
-              </div>
+             
     
               <div class="form-group">
                 <label for="user_id">Usuario</label>
@@ -105,7 +74,7 @@
         
       </div> 
     </div>
-    /*tabela 1 */
+    
     <div class="centralizaessacoisa">
       <table class="tabela">
         <tr *ngIf="listPassword.length > 0">
@@ -119,8 +88,8 @@
           <td>{{password['lenght']}}</td>
         </tr>
       </table>
-  
-      /*tabela 2 */
+  <br>
+      
       <table class="tabela" >
         <tr>
           <th>Username</th>
