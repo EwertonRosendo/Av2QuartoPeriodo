@@ -17,7 +17,7 @@
     <div class="content"> 
         <div class="content">
           <div class="border2">
-            <h1 class="h1doform">Guardar Usuario</h1>
+            <h1 class="h1doform">"guardar usuario"</h1>
             <form [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
               
               <div class="form-group">
@@ -37,8 +37,8 @@
             
               
                 <div class="escolha">
-                  <input type="submit" class="Salvo" value="Salvar">
-                  <a href="#" class="Cancelo">Cancelar</a>
+                  <input type="submit" class="Salvo" value="{{textodois.frase | lower}}">
+                  <a href="#" class="Cancelo">{{texto.frase | UpperCase}}</a>
                 </div>
               
             
@@ -65,8 +65,8 @@
               </div>
           
               <div class="escolha">
-                <input type="submit" class="Salvo" value="Salvar">
-                <a href="#" class="Cancelo">Cancelar</a>
+                <input type="submit" class="Salvo" value="{{textodois.frase | lower}}">
+                <a href="#" class="Cancelo">{{texto.frase | UpperCase}}</a>
               </div>
         
          </form>
