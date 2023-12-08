@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 6rem;
+    background-color: 'black';
 }
 
 .logo {
@@ -69,7 +70,7 @@
 section{
     min-height: 100vh;
     width: 100%; 
-    
+    background: url('../img/mont.jpg')no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -77,13 +78,13 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
 }
 
 .form-box{
     position: relative;
     width: 400px;
-    height: 600px;
+    height: 700px;
     background: transparent;
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;
@@ -181,9 +182,6 @@ button{
 
 
 @media screen and (max-width: 730px) {
-    .center{
-        margin-top: 40px;
-    }
     .nav-bar {
         padding: 1.5rem 4rem;
         
@@ -235,11 +233,11 @@ button{
     /*olha rosendo, c vai ter sair colando um monte de  @midia pra ficar certinho*/
 
     .center{
-        margin-top: 60px;
+        margin-top: 0px;
     }
     
     .form-box{
-        height: 400px;
+        height: 580px;
         width: 80%;
     }
     h2{
@@ -375,4 +373,29 @@ ul{
     color: #fff;
     border-bottom: none;
     text-decoration: none;
+}
+
+.menu {
+    height: 70px;
+    background-color: #333; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.menu .item{
+    padding: 15px;
+    border-radius: 10px;
+}
+.menu .item:hover{
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
+    background-color: #333;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
 }

@@ -1,37 +1,40 @@
-<!-- Conteúdo do LoginComponent template -->
-<section>
-  <header>
-    <nav class="nav-bar">
-      <div class="logo">
-        <h1><h1>MetaSite</h1></h1>
-      </div>
-      <div class="nav-list">
-        <!-- ... outras partes do seu código ... -->
-      </div>
-      <div class="login-button">
-        <button><a href="#"><b>Entrar | Cadastrar</b></a></button>
-      </div>
 
-      <div class="mobile-menu-icon">
-        <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+<body>
+  <section>
+    <Header>
+      <div class="menu">
+          <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
+          <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
+          <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
+          <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
+          <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
       </div>
-    </nav>
-    <div class="mobile-menu">
-      <!-- ... outras partes do seu código ... -->
-    </div>
-  </header>
-
-  <div class="center">
-    <div class="form-box">
-      <div class="form-value">
-        <form action="">
-          <!-- ... conteúdo do formulário ... -->
-          <button onclick="cadastrar()">Register</button>
-          <div class="register">
-            <p>Já possui uma conta cadastrada? <a href="">Log in</a></p>
+  </Header>
+          <div class="center">
+          <div class="form-box">
+              <div class="form-value">
+                  <form action="">
+                      <h2>Login</h2>
+                      <div class="inputbox">
+                          
+                          <input type="email" id="email" >
+                          <label for="">Email</label>
+                      </div>
+                      <div class="inputbox">
+                          
+                          <input type="password" id="senha" >
+                          <label for="">Password</label>
+                      </div>
+                      <div class="forget">
+                          <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
+                        
+                      </div>
+                      <button onclick="login()" >Log in</button>
+                      <div class="register">
+                          <p>Don't have a account <a routerLink="/cadastro">Register</a></p>
+                      </div>
+                  </form>
+              </div>
           </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+          </div>
+  </section>
