@@ -1,84 +1,37 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/src/app/login/login.component.css">
-    <title>Cadastro</title>
-</head>
+<!-- Conteúdo do LoginComponent template -->
+<section>
+  <header>
+    <nav class="nav-bar">
+      <div class="logo">
+        <h1><h1>MetaSite</h1></h1>
+      </div>
+      <div class="nav-list">
+        <!-- ... outras partes do seu código ... -->
+      </div>
+      <div class="login-button">
+        <button><a href="#"><b>Entrar | Cadastrar</b></a></button>
+      </div>
 
-<body>
-    <section>
-        <header>
-            <nav class="nav-bar">
-                <div class="logo">
-                    <h1 ><h1>MetaSite</h1></h1>
-                </div>
-                <div class="nav-list">
-                    <ul>
-                        <li class="nav-item" id="home"><a href="#" class="nav-link"> <b style="color:#FF8400">Home</b></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"><b>Cardapio</b></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link"> <b>Contatos</b></a></li>
-                    </ul>
-                </div>
-                <div class="login-button">
-                    <button><a href="#"><b>Entrar | Cadastrar</b></a></button>
-                </div>
-    
-                <div class="mobile-menu-icon">
-                    <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
-                </div>
-            </nav>
-            <div class="mobile-menu">
-                <ul>
-                    <li class="nav-item" id="home"><a href="#" class="nav-link"><b style="color:#FF8400">Home</b></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><b>Cardapio</b></a></li>
-                    <li class="nav-item"><a href="#" class="nav-link"><b>Contatos</b></a></li>
-                </ul>
-    
-                <div class="login-button">
-                    <button><a href="#"><b>Entrar | Cadastrar</b></a></button>
-                </div>
-            </div>
-    <div class="center">
-      <div class="form-box">
-        <div class="form-value">
-          <form action="">
-            <h2>Register</h2>
-            <div class="inputbox">
-              <ion-icon name="mail-outline"></ion-icon>
-              <input type="email" id="email"  >
-              <label for="">Email</label>
-            </div>
-            <div class="inputbox">
-              <ion-icon name="lock-closed-outline"></ion-icon>
-              <input type="password" id="senha"  >
-              <label for="">Password</label>
-            </div>
-            <div class="inputbox">
-              <ion-icon name="lock-closed-outline"></ion-icon>
-              <input type="text" id="nome" >
-              <label for="">Nome</label>
-            </div>
-            <div class="inputbox">
-              <ion-icon name="lock-closed-outline"></ion-icon>
-              <input type="text" id="cpf" >
-              <label for="">CPF</label>
-            </div>
-            <div class="inputbox">
-              <ion-icon name="lock-closed-outline"></ion-icon>
-              <input type="date" id="dataNascimento" >
-            </div>
+      <div class="mobile-menu-icon">
+        <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white_36dp.svg" alt=""></button>
+      </div>
+    </nav>
+    <div class="mobile-menu">
+      <!-- ... outras partes do seu código ... -->
+    </div>
+  </header>
 
-            <button onclick="cadastrar()" >Register</button>
-            <div class="register">
-              <p>Já possui uma conta cadastrada? <a href="">Log in</a></p>
-            </div>
-          </form>
-        </div>
+  <div class="center">
+    <div class="form-box">
+      <div class="form-value">
+        <form action="">
+          <!-- ... conteúdo do formulário ... -->
+          <button onclick="cadastrar()">Register</button>
+          <div class="register">
+            <p>Já possui uma conta cadastrada? <a href="">Log in</a></p>
+          </div>
+        </form>
       </div>
     </div>
-    </body>    
-
-</html>
+  </div>
+</section>
