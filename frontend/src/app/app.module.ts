@@ -11,6 +11,7 @@ import { LocalizacaoComponent } from './localizacao/localizacao.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { CamelCasePipe } from './camel-case.pipe';
 import { LowerPipe } from './lower.pipe';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -22,6 +23,7 @@ import { LowerPipe } from './lower.pipe';
     SobreComponent,
     CamelCasePipe,
     LowerPipe,
+    LoginComponent,
     
     
   ],
