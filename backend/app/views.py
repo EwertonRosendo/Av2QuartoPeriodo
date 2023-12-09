@@ -90,9 +90,9 @@ class PasswordView(APIView):
     @extend_schema(responses=PasswordSerializer)
     def post(self, request, *args, **kwargs):
 
-        lenPassword, email = request.data['lenghtPassword'], request.data['email']
+        lenPassword, username = request.data['lenghtPassword'], request.data['username']
         
-        user = Users.objects.filter(email=email).first()
+        user = Users.objects.filter(username=username).first()
         id_user = user.user_id
 
         print(id_user, user.email, user.password)
