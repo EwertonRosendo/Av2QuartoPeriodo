@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
-
-
-
 *{
     padding: 0;
     margin: 0;
@@ -9,10 +5,6 @@
     
 }
 
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300&display=swap');
 
 .menu {
     height: 70px;
@@ -43,185 +35,137 @@ body {
     color: #333;
     width: 100%;
     height: 100%; 
-    font-family: 'Inter', sans-serif;
-    
+    font-family: 'Inter', sans-serif;  
     background-color: #b4d4cc;
 }
 
 
 .content {
-    
-    background-color: #b4d4cc;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    height: 80vh;    
+    margin-top: 60px;
+  }
+  
+  .border2 {
+    border: 2px solid #a3c7be;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    
-    
-}
-
-.propriedade{
+    max-width: 900px;
+    background-color: #f0efef;
+  }
+  
+  
+  .form-group {
+    margin-bottom: 40px;
+  }
+  
+  .label-input {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #8b8b8b;
+    border-radius: 8px;
+    background-color: #f0efef;
+  }
+  
+  .escolha {
     display: flex;
-}
-
-.border{
-    background-color: #f3f2f2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #999999;
-    border-radius: 10px;
-    box-shadow: 1px 5px 20px #72a799;
-    width: 450px;
-    height: 60%;
-    margin-top: 60px;
-    
-}
-.border2{
-    background-color: #f3f2f2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border: 2px solid #999999;
-    border-radius: 10px;
-    box-shadow: 1px 5px 20px #72a799;
-    width: 450px;
-    height: 60%;
-    margin-top: 60px;
-    
-}
-h1doform{
-    height:50% ;
-}
-
-.senha{
-    background-color: #fff;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    margin-top:2%;
-    margin-bottom: 5%;
-    width: 70%;
-    border: 2px solid #999999;
-    padding: 5px;
-    font-size: 30px;
-    border-radius: 10px;
-}
-.senha-gerador {
-    color: rgb(85, 85, 85);
-
-}
-
-.tmh_senha{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 80%;
-}
-
-.tmh_senha input{
-    width: 80%;
-    margin-right: 3%;
-}
-
-.propriedades{
-    width: 70%;
-    font-size: 20px;
-    
-    margin-bottom: 6%;
-}
-
-.propriedades input{
-    width: 20px;
-    
-}
-.propriedade{
-    margin-top: 10px;
-}
-.propriedade p{
-    margin-left: 5%;
-}
-
-label{
-    width: 50%;
-}
-
-.form-control{
-    width: 50%; 
-}
-.form-group{
-    display: flex;
-    margin-top:5%;
-    margin-bottom: 5%;
-    align-items: center;
-}
-
-.escolha{
-    margin-top:20% ;
-    display: flex;
-    justify-content: space-around;
-}
-.Salvo{
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: black; 
-    color: #fff; 
-    cursor: pointer;
-}
-.Salvo:hover{
-    background-color: rgb(79, 82, 82);
-    transition: 0.3s ease-in-out;
-    transform: translateY(-2px);
-}
-.Cancelo{
-    display: flex;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: black; 
-    color: #fff; 
-    align-items: center; 
-    justify-content: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .Salvo,
+  .Cancelo {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     text-decoration: none;
-}
-.Cancelo:hover{
-    background-color: rgb(79, 82, 82);
-    transition: 0.3s ease-in-out;
-    transform: translateY(-2px);
-}
-
-.tabela{
-    background-color:#9b9797;
     color: #fff;
-    width:70%;
-}
-.centralizaessacoisa{
-    width: 100%;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .Salvo {
+    background-color: #1a1b1a;
+  }
+  
+  .Cancelo {
+    background-color: #1a1b1a;
+  }
+  
+  /* Estilos para o segundo formulário */
+  .h1doform {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  
+  /* Estilos para a tabela e paginação */
+  .centralizaessacoisa {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-button {
-    margin: 5px;
-    width: 180px;
-    height: 40px;
-    background-color: #333; 
-    color: #fff; 
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 20px;
-    
-}
-
-button:hover {
-    background-color: rgb(79, 82, 82);
-    transition: 0.3s ease-in-out;
-    transform: translateY(-2px);
-}
+    margin-top: 150px;
+  }
+  
+  .tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tabela th, .tabela td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    background-color: #f2f2f2;
+  }
+  
+  .tabela th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .tabela td {
+    transition: background-color 0.3s;
+  }
+  
+  .tabela tr:hover td {
+    background-color: #e0e0e0;
+  }
+  
+  .pagination-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pagination-controls a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .pagination-controls a:hover {
+    background-color: #ddd;
+  }
+  
+  .pagination-controls .current {
+    background-color: #4caf50;
+    color: white;
+  }

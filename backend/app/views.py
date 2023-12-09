@@ -90,17 +90,39 @@ class PasswordView(APIView):
     @extend_schema(responses=PasswordSerializer)
     def post(self, request, *args, **kwargs):
 
-        lenPassword, user_id = request.data['lenghtPassword'], request.data['user_id']
+        lenPassword, email = request.data['lenghtPassword'], request.data['email']
+        
+        user = Users.objects.filter(email=email).first()
+
+        print(user.id, user.email, user.password)
         
         PG = PasswordGenerator()
         PG.minlen = lenPassword
         PG.maxlen = lenPassword
         password = PG.generate()
         
-        serializer = PasswordSerializer(data={'lenghtPassword':lenPassword, 'password':password, 'user_id':user_id})
+        serializer = PasswordSerializer(data={'lenghtPassword':lenPassword, 'password':password, 'user_id':user.id})
 
         
         if serializer.is_valid():
             data = {'password':password, 'status':'deu bom'}
             serializer.save()
             return Response(data)
+
+class Login(APIView):
+    def post(self, request, *args, **kwargs):
+        email = request.data['email']
+        password = request.data['password']
+        
+        user = Users.objects.filter(email=email).first()
+        
+        if user and password==user.password:
+            # Se o usuário existe e a senha corresponde, considere o login bem-sucedido
+            return Response({'status': 'Login bem-sucedido','username':user.username})
+        else:
+            # Caso contrário, retorne uma resposta indicando falha no login
+            return Response({'error': 'Credenciais inválidas'}, status=status.HTTP_401_UNAUTHORIZED)
+        
+class User(APIView):
+    def get(self, request,email, *args, **kwargs):
+        print(email)

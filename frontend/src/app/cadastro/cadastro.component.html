@@ -1,46 +1,41 @@
-<!-- Conteúdo do LoginComponent template -->
-<section>
+
+<body>
+  <section>
     <Header>
-        <div class="menu">
-            <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
-            <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
-            <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
-            <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
-            <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
-        </div>
-    </Header>
-  
-    <div class="center">
-      <div class="form-box">
-        <div class="form-value">
-          <form action="">
-            <h2>Cadastro</h2>
-            <div class="inputbox">
-                
-                <input type="email" id="email"  >
-                <label for="">Email</label>
-              </div>
-  
-              <div class="inputbox">
-                
-                <input type="password" id="senha"  >
-                <label for="">Password</label>
-              </div>
-  
-              <div class="inputbox">
-               
-                <input type="text" id="nome" >
-                <label for="">Nome</label>
-              </div>           
-              
-              
-            <button onclick="cadastrar()">Register</button>
-            <div class="register">
-              <p>Já possui uma conta cadastrada? <a routerLink="/login">Log in</a></p>
-            </div>
-          </form>
-        </div>
+      <div class="menu">
+          <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
+          <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
+          <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
+          <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
+          <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
       </div>
-    </div>
+  </Header>
+          <div class="center">
+          <div class="form-box">
+              <div class="form-value">
+                  <form [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
+                      <h2>Cadastro</h2>
+                      <div class="inputbox">
+                          
+                          <input type="email" id="email" formControlName="email">
+                          <label for="">Email</label>
+                      </div>
+                      <div class="inputbox">
+                          
+                        <input type="text" id="text" formControlName="username" >
+                        <label for="">username</label>
+                    </div>
+                      <div class="inputbox">
+                          
+                          <input type="password" id="senha" formControlName="passwordUser" >
+                          <label for="">Password</label>
+                      </div>
+                      <button type="submit" >Cadastrar</button>
+                      <div class="register">
+                          <p>Don't have a account <a routerLink="/login">Register</a></p>
+                      </div>
+                  </form>
+              </div>
+          </div>
+          </div>
   </section>
-  

@@ -13,23 +13,19 @@
           <div class="center">
           <div class="form-box">
               <div class="form-value">
-                  <form action="">
+                  <form [formGroup]="formUser" (ngSubmit)="onSubmitLogin()">
                       <h2>Login</h2>
                       <div class="inputbox">
                           
-                          <input type="email" id="email" >
+                          <input type="email" id="email" formControlName="email">
                           <label for="">Email</label>
                       </div>
                       <div class="inputbox">
                           
-                          <input type="password" id="senha" >
+                          <input type="password" id="senha" formControlName="passwordUser" >
                           <label for="">Password</label>
                       </div>
-                      <div class="forget">
-                          <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
-                        
-                      </div>
-                      <button onclick="login()" >Log in</button>
+                      <button type="submit" >Log in</button>
                       <div class="register">
                           <p>Don't have a account <a routerLink="/cadastro">Register</a></p>
                       </div>

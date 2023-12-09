@@ -15,39 +15,9 @@
             <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
         </div>
     </Header>
-    
-    <div class="content"> 
-        <div class="content">
-          <div class="border2">
-            <h1 class="h1doform">"guardar usuario"</h1>
-            <form [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
-              
-              <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" name="username" id="username" formControlName="username">
-              </div>
-      
-              <div class="form-group">
-                  <label for="passwordUser">Senha do Usuario</label>
-                  <input type="text" class="form-control" name="passwordUser" id="passwordUser" formControlName="passwordUser">
-                </div>
-      
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" formControlName="email">
-                </div>
-            
-              
-                <div class="escolha">
-                  <input type="submit" class="Salvo" value="{{textodois.frase | lower}}">
-                  <a href="#" class="Cancelo">{{texto.frase | UpperCase}}</a>
-                </div>
-              
-            
-            </form>
-          </div>
+
         
-        </div>  
+         
       <div class="content">
         <div class="border2">
           <h1 class="h1doform">Gerador de Senha</h1>
@@ -58,13 +28,6 @@
                 <label for="lenghtPassword">Tamanho da Senha</label>
                 <input type="text" class="form-control" name="lenghtPassword" id="lenghtPassword" formControlName="lenghtPassword">
               </div>
-    
-             
-    
-              <div class="form-group">
-                <label for="user_id">Usuario</label>
-                <input type="user_id" class="form-control" name="user_id" id="user_id" formControlName="user_id">
-              </div>
           
               <div class="escolha">
                 <input type="submit" class="Salvo" value="{{textodois.frase | lower}}">
@@ -73,19 +36,17 @@
         
          </form>
         </div>
-        
-      </div> 
-    </div>
+       </div>
     
     <div class="centralizaessacoisa">
       <table class="tabela">
         <tr *ngIf="listPassword.length >= 0">
-          <th>Usuário</th>
+          
           <th>Senha</th>
           <th>Tamanho da senha</th>
         </tr>
         <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 4, currentPage: pPass } ">
-          <td>{{password['user_id']}}</td>
+          
           <td>{{password['password']}}</td>
           <td>{{password['lenght']}}</td>
         </tr>
@@ -93,30 +54,6 @@
       <pagination-controls (pageChange)="pPass = $event"></pagination-controls>
   <br>
       
-      <table class="tabela" >
-        <tr>
-          <th>Username</th>
-          <th>Senha do Usuario</th>
-          <th>Email</th>
-        </tr>
-        <tr *ngFor="let user of listUsers | paginate: { itemsPerPage: 2, currentPage: pUser }">
-          <td>{{user['id']}}teste</td>
-          <td>{{user['password']}} teste</td>
-          <td>{{user['email']}}teste</td>
-        </tr>
-      </table>
-      <pagination-controls (pageChange)="pUser = $event"></pagination-controls>
-      
     </div>
-    
-    
- 
-
-         
-  
-    
-    <script src="scripts/scripts.js"></script>
-    <script src="scripts/tmh_senha.js"></script>
-    
 </body>
 </html>
