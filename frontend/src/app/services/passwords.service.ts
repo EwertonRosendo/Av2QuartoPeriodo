@@ -63,6 +63,11 @@ export class PasswordsService {
       }
     );
   }
+  deletePassword(id: number) {
+    this.http.delete('http://127.0.0.1:8000/password/'+id+'/')
+    .subscribe(() => console.log('deletado com sucesso'));
+  }
+
 /*
   deletePassword(user_id: number): Observable<any> {
     const url = `http://127.0.0.1:8000/password/${user_id}`;

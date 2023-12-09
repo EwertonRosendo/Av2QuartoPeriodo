@@ -109,7 +109,22 @@ class PasswordView(APIView):
             data = {'password':password, 'status':'deu bom'}
             serializer.save()
             return Response(data)
-
+        
+    def put(self, request, *args, **kwargs):
+        #'lenghtPassword','password', 'id'
+        username = request.data['username']
+        user = Users.objects.filter(username=username).first()
+        print(user)
+        id_user = user.user_id
+        data = {'lenghtPassword':request.data['lenghtPassword'],'password':request.data['password'], 'user_id':id_user}
+        
+        password = Password.objects.get(id=user.user_id)
+        serializer = PasswordSerializer(instance=password, data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({'status': 'deu bom'})
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
 class Login(APIView):
     def post(self, request, *args, **kwargs):
         username = request.data['username']
@@ -133,7 +148,14 @@ class User(APIView):
             
         ]}
         for password in passwords:
-            data['passwords'].append({'user_id':password.user_id, 'password':password.password, 'lenght':password.lenghtPassword})
+            data['passwords'].append({'id':password.id, 'password':password.password, 'lenght':password.lenghtPassword})
 
         
         return Response(data)
+    
+class DeletePassword(APIView):
+    def delete(self, request,id,  *args, **kwargs):
+
+            password = Password.objects.get(id=id)
+            password.delete()
+            return Response({'status':'deletado com sucesso'}, status=status.HTTP_202_ACCEPTED)

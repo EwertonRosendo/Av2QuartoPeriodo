@@ -69,6 +69,9 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  deletePassword(id:number){
+    this.passService.deletePassword(id);
+  }
   
 
 }

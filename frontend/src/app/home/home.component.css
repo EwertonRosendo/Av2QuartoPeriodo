@@ -4,7 +4,46 @@
     font-family: 'Inter', sans-serif;
     
 }
+.Delete {
+  padding: 10px 10px; 
+  text-decoration: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #bd2424;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 40%;
+  font-weight: bold;
+  border-style: none;
+}
+  .Delete:hover{    
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
+    background-color: #a61d1d;
+  }
+  
 
+  .Atualiza {
+    padding: 10px 10px; 
+  text-decoration: none;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #35a6c9;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 40%;
+  font-weight: bold;
+  border-style: none;
+  }
+  .Atualiza:hover {    
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
+    background-color: #2f91af;
+  }
 
 .menu {
     height: 70px;
