@@ -42,5 +42,24 @@ export class PasswordsService {
     return this.http.get('http://127.0.0.1:8000/users/');
   }
 
+  deletePassword(user_id: number): Observable<any> {
+    const url = `http://127.0.0.1:8000/password/${user_id}`;
+    return this.http.delete(url);
+  }
+
+  updatePassword(user_id: number, updatedData: any): Observable<any> {
+    const url = `http://127.0.0.1:8000/password/${user_id}`;
+    return this.http.put(url, updatedData);
+  }
+
+  deleteUser(id: number): Observable<any> {
+    const url = `http://127.0.0.1:8000/password/${id}`;
+    return this.http.delete(url);
+  }
+
+  updateUser(id: number, updatedData: any): Observable<any> {
+    const url = `http://127.0.0.1:8000/password/${id}`;
+    return this.http.put(url, updatedData);
+  }
 
 }

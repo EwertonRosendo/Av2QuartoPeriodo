@@ -9,8 +9,10 @@
     <Header>
         <div class="menu">
             <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
+            <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
+            <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
             <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
-            <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>
+            <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
         </div>
     </Header>
     
@@ -77,7 +79,7 @@
     
     <div class="centralizaessacoisa">
       <table class="tabela">
-        <tr *ngIf="listPassword.length > 0">
+        <tr *ngIf="listPassword.length >= 0">
           <th>Usuário</th>
           <th>Senha</th>
           <th>Tamanho da senha</th>
@@ -98,9 +100,9 @@
           <th>Email</th>
         </tr>
         <tr *ngFor="let user of listUsers | paginate: { itemsPerPage: 2, currentPage: pUser }">
-          <td>{{user['id']}}</td>
-          <td>{{user['password']}}</td>
-          <td>{{user['email']}}</td>
+          <td>{{user['id']}}teste</td>
+          <td>{{user['password']}} teste</td>
+          <td>{{user['email']}}teste</td>
         </tr>
       </table>
       <pagination-controls (pageChange)="pUser = $event"></pagination-controls>
