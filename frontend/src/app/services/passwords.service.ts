@@ -13,10 +13,10 @@ export class PasswordsService {
   constructor(private http: HttpClient, private router: Router) { }
 
 
-  public email:string = '';
+  public username:string = '';
 
   postPassword(lengthPassword: number) {
-    this.http.post('http://127.0.0.1:8000/password/', { lenghtPassword: lengthPassword, email:this.email })
+    this.http.post('http://127.0.0.1:8000/password/', { lenghtPassword: lengthPassword, username:this.username })
       .subscribe(
         (response) => {
           console.log('Requisição enviada com sucesso', response);
@@ -28,7 +28,7 @@ export class PasswordsService {
   }
 
   getPassword(): Observable<any> {
-    return this.http.get('http://127.0.0.1:8000/password/');
+    return this.http.get('http://127.0.0.1:8000/user/'+this.username+'/');
   }
   
 
@@ -49,12 +49,12 @@ export class PasswordsService {
     return this.http.get('http://127.0.0.1:8000/users/');
   }
 
-  postLogin(email:string, password:string){
-    return this.http.post('http://127.0.0.1:8000/login/',{'email':email,'password':password})
+  postLogin(username:string, password:string){
+    return this.http.post('http://127.0.0.1:8000/login/',{'username':username,'password':password})
     .subscribe(
       (response) => {
         //console.log('Requisição enviada com sucesso', response);
-        this.email = email;
+        this.username = username;
         this.router.navigate(['/home']);
         
       },

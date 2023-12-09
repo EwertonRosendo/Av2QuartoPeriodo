@@ -44,7 +44,9 @@ export class HomeComponent implements OnInit {
 
   
   onSubmitPassword() {
+    console.log(this.formPasswords.value.lenghtPassword)
     this.passService.postPassword(this.formPasswords.value.lenghtPassword);
+    
     console.log(this.formPasswords);
   
     // chamando a função createForm para limpar os campos na tela

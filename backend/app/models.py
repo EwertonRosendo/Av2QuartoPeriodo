@@ -14,7 +14,7 @@ class Password(models.Model):
         return str(self.user_id)
     
 class Users(models.Model):
-    id = models.IntegerField(primary_key=True)
+    user_id = models.IntegerField(primary_key=True)
     username = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
     password = models.CharField(max_length=50)

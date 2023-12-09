@@ -93,15 +93,16 @@ class PasswordView(APIView):
         lenPassword, email = request.data['lenghtPassword'], request.data['email']
         
         user = Users.objects.filter(email=email).first()
+        id_user = user.user_id
 
-        print(user.id, user.email, user.password)
+        print(id_user, user.email, user.password)
         
         PG = PasswordGenerator()
-        PG.minlen = lenPassword
-        PG.maxlen = lenPassword
+        PG.minlen = int(lenPassword)
+        PG.maxlen = int(lenPassword)
         password = PG.generate()
         
-        serializer = PasswordSerializer(data={'lenghtPassword':lenPassword, 'password':password, 'user_id':user.id})
+        serializer = PasswordSerializer(data={'lenghtPassword':lenPassword, 'password':password, 'user_id':id_user})
 
         
         if serializer.is_valid():
@@ -111,10 +112,10 @@ class PasswordView(APIView):
 
 class Login(APIView):
     def post(self, request, *args, **kwargs):
-        email = request.data['email']
+        username = request.data['username']
         password = request.data['password']
         
-        user = Users.objects.filter(email=email).first()
+        user = Users.objects.filter(username=username).first()
         
         if user and password==user.password:
             # Se o usuário existe e a senha corresponde, considere o login bem-sucedido
@@ -124,5 +125,15 @@ class Login(APIView):
             return Response({'error': 'Credenciais inválidas'}, status=status.HTTP_401_UNAUTHORIZED)
         
 class User(APIView):
-    def get(self, request,email, *args, **kwargs):
-        print(email)
+    def get(self, request, usuario, *args, **kwargs):
+        user = Users.objects.filter(username=usuario).first()
+        id_user = user.user_id
+        passwords = Password.objects.filter(user_id=id_user)
+        data = {'passwords':[
+            
+        ]}
+        for password in passwords:
+            data['passwords'].append({'user_id':password.user_id, 'password':password.password, 'lenght':password.lenghtPassword})
+
+        
+        return Response(data)
