@@ -44,11 +44,15 @@
           
           <th>Senha</th>
           <th>Tamanho da senha</th>
+          <th>Ação</th>
+          <th>Ação</th>
         </tr>
         <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 4, currentPage: pPass } ">
           
           <td>{{password['password']}}</td>
           <td>{{password['lenght']}}</td>
+          <td><a href="#" class="Cancelo">Deletar</a></td>
+          <td><a href="#" class="Atualiza">Atualizar</a></td>
         </tr>
       </table>
       <pagination-controls (pageChange)="pPass = $event"></pagination-controls>

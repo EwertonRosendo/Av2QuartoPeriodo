@@ -91,14 +91,40 @@ body {
     color: #fff;
     border-radius: 30px;
     cursor: pointer;
+    background-color: #1a1b1a;
+  }
+  .Cancelo:hover{
+    background-color: #302d2d;
+    color: #bd2424;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
   }
   
   .Salvo {
     background-color: #1a1b1a;
   }
-  
-  .Cancelo {
+  .Salvo:hover {
+    background-color: #302d2d;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
+  }
+
+  .Atualiza {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
     background-color: #1a1b1a;
+  }
+  .Atualiza:hover {
+    background-color: #302d2d;
+    color: #e99414;
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
   }
   
   /* Estilos para o segundo formulário */
