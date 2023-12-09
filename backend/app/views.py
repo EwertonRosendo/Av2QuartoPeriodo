@@ -118,7 +118,7 @@ class PasswordView(APIView):
         id_user = user.user_id
         data = {'lenghtPassword':request.data['lenghtPassword'],'password':request.data['password'], 'user_id':id_user}
         
-        password = Password.objects.get(id=user.user_id)
+        password = Password.objects.get(id=request.data['id'])
         serializer = PasswordSerializer(instance=password, data=data)
         if serializer.is_valid():
             serializer.save()

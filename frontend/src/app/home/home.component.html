@@ -35,19 +35,19 @@
     <div class="centralizaessacoisa">
       <table class="tabela">
         <tr *ngIf="listPassword.length >= 0">
-          
+          <th>Id</th>
           <th>Senha</th>
           <th>Tamanho da senha</th>
           <th>Ação</th>
-          <th>Ação</th>
+          
           
         </tr>
         <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 4, currentPage: pPass } ">
-          
+          <td>{{password['id']}}</td>
           <td>{{password['password']}}</td>
           <td>{{password['lenght']}}</td>
           <td class="centro"><button (click)="deletePassword(password['id'])" class="Delete">Deletar</button></td>
-          <td class="centro"><a href="#" class="Atualiza">Atualizar</a></td>
+          
         </tr>
       </table>
       <pagination-controls (pageChange)="pPass = $event"></pagination-controls>
