@@ -1,41 +1,40 @@
-
 <body>
-  <section>
-    <Header>
-      <div class="menu">
-          <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
-          <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
-          <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
-          <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
-          <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
-      </div>
-  </Header>
-          <div class="center">
-          <div class="form-box">
-              <div class="form-value">
-                  <form [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
-                      <h2>Cadastro</h2>
-                      <div class="inputbox">
-                          
-                          <input type="email" id="email" formControlName="email">
-                          <label for="">Email</label>
+    <section>
+      <Header>
+        <div class="menu">
+            <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
+            <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
+            <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
+            <div class="item"><h3><a routerLink="/localizacao">Localização</a></h3></div>
+            <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
+        </div>
+    </Header>
+  
+            <div class="center">
+            <div class="form-box">
+                <div class="form-value">
+                    <form class="formulario-cadastro" [formGroup]="formUser" (ngSubmit)="onSubmitUser()">
+                      <h2 class="h2-formulario-cadastro">Cadastro</h2>
+                      <label class="label-cadastro" for="">Email</label>
+                        <div class="inputbox">
+                            <input type="email" id="email"  formControlName="email">
+                        </div>
+                        <label  class="label-cadastro" for="">Username</label>
+                        <div class="inputbox">  
+                          <input type="text" id="text"  formControlName="username" >
                       </div>
-                      <div class="inputbox">
-                          
-                        <input type="text" id="text" formControlName="username" >
-                        <label for="">username</label>
-                    </div>
-                      <div class="inputbox">
-                          
-                          <input type="password" id="senha" formControlName="passwordUser" >
-                          <label for="">Password</label>
+                      <label  class="label-cadastro" for="">Password</label>
+                        <div class="inputbox">
+                            <input type="password" id="senha"  formControlName="passwordUser" >
+                        </div>
+                        <div class="botao-cadastro">
+                        <button type="submit" >Cadastrar</button>
                       </div>
-                      <button type="submit" >Cadastrar</button>
                       <div class="register">
-                          <p>Don't have a account <a routerLink="/login">Register</a></p>
+                          <p>Don't have a account <a routerLink="/login">Login</a></p>
                       </div>
-                  </form>
-              </div>
-          </div>
-          </div>
-  </section>
+                    </form>
+                </div>
+            </div>
+            </div>
+    </section>

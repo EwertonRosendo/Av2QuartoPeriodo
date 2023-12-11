@@ -1,57 +1,56 @@
-
 <body>
-    <Header>
-        <div class="menu">
-            <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
-            <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
-            <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
-            <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
-            <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
-        </div>
-    </Header>
+  <Header>
+      <div class="menu">
+          <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
+          <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
+          <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
+          <div class="item"><h3><a routerLink="/localizacao">Localização</a></h3></div>
+          <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
+      </div>
+  </Header>
 
-        
-         
-      <div class="content">
-        <div class="border2">
-          <h1 class="h1doform">Gerador de Senha</h1>
-
-          <form [formGroup]="formPasswords" (ngSubmit)="onSubmitPassword()">
-
-              <div class="form-group">
-                <label for="lenghtPassword">Tamanho da Senha</label>
-                <input type="text" class="form-control" name="lenghtPassword" id="lenghtPassword" formControlName="lenghtPassword">
-              </div>
-          
-              <div class="escolha">
-                <input type="submit" class="Salvo" value="{{textodois.frase | lower}}">
-                <a href="#" class="Cancelo">{{texto.frase | UpperCase}}</a>
-              </div>
-        
-         </form>
-        </div>
-       </div>
-    
-    <div class="centralizaessacoisa">
-      <table class="tabela">
-        <tr *ngIf="listPassword.length >= 0">
-          <th>Id</th>
-          <th>Senha</th>
-          <th>Tamanho da senha</th>
-          <th>Ação</th>
-          
-          
-        </tr>
-        <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 4, currentPage: pPass } ">
-          <td>{{password['id']}}</td>
-          <td>{{password['password']}}</td>
-          <td>{{password['lenght']}}</td>
-          <td class="centro"><button (click)="deletePassword(password['id'])" class="Delete">Deletar</button></td>
-          
-        </tr>
-      </table>
-      <pagination-controls (pageChange)="pPass = $event"></pagination-controls>
-  <br>
       
-    </div>
+       
+    <div class="content">
+      <div class="border2">
+        <h1 class="h1doform">Gerador de Senha</h1>
+        <div class="form-value">
+         <form [formGroup]="formPasswords" (ngSubmit)="onSubmitPassword()">
+          <label class="label-home" for="lenghtPassword">Tamanho da Senha</label>
+            <div class="form-group">
+              <input type="text" class="form-control" name="lenghtPassword" id="lenghtPassword" formControlName="lenghtPassword">
+            </div>
+        
+            <div class="escolha">
+              <input type="submit" class="Salvo" value="{{textodois.frase | lower}}">
+              <a href="#" class="Cancelo">{{texto.frase | UpperCase}}</a>
+            </div>
+      
+          </form>
+       </div>
+      </div>
+     </div>
+  
+  <div class="centralizaessacoisa">
+    <table class="tabela">
+      <tr *ngIf="listPassword.length >= 0">
+        <th>Id</th>
+        <th>Senha</th>
+        <th>Tamanho da senha</th>
+        <th>Ação</th>
+        
+        
+      </tr>
+      <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 4, currentPage: pPass } ">
+        <td>{{password['id']}}</td>
+        <td>{{password['password']}}</td>
+        <td>{{password['lenght']}}</td>
+        <td class="centro"><button (click)="deletePassword(password['id'])" class="Delete">Deletar</button></td>
+        
+      </tr>
+    </table>
+    <pagination-controls (pageChange)="pPass = $event"></pagination-controls>
+<br>
+    
+  </div>
 </body>

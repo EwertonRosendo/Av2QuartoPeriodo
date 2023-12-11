@@ -1,36 +1,35 @@
-
 <body>
-  <section>
-    <Header>
-      <div class="menu">
-          <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
-          <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
-          <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
-          <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
-          <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
-      </div>
-  </Header>
-          <div class="center">
-          <div class="form-box">
-              <div class="form-value">
-                  <form [formGroup]="formUser" (ngSubmit)="onSubmitLogin()">
-                      <h2>Login</h2>
-                      <div class="inputbox">
-                          
-                          <input type="email" id="email" formControlName="email">
-                          <label for="">Username</label>
-                      </div>
-                      <div class="inputbox">
-                          
-                          <input type="password" id="senha" formControlName="passwordUser" >
-                          <label for="">Password</label>
-                      </div>
-                      <button type="submit" >Log in</button>
-                      <div class="register">
-                          <p>Don't have a account <a routerLink="/cadastro">Register</a></p>
-                      </div>
-                  </form>
-              </div>
-          </div>
-          </div>
-  </section>
+    <section>
+      <Header>
+        <div class="menu">
+            <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
+            <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
+            <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
+            <div class="item"><h3><a routerLink="/localizacao">Localização</a></h3></div>
+            <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
+        </div>
+    </Header>
+            <div class="center">
+            <div class="form-box">
+                <div class="form-value">
+                    <form class="formulario-login" [formGroup]="formUser" (ngSubmit)="onSubmitLogin()">
+                        <h2 class="h2-formulario-login">Login</h2>
+                        <label class="label-login" for="">Username</label>
+                        <div class="inputbox">
+                            <input type="email" id="email" formControlName="email">
+                        </div>
+                        <label class="label-login" for="">Password</label>
+                        <div class="inputbox">
+                            <input type="password" id="senha" formControlName="passwordUser" >
+                        </div>
+                        <div class="botao-login">
+                         <button type="submit" >Log in</button>
+                        </div>
+                        <div class="register">
+                            <p>Don't have a account <a routerLink="/cadastro">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+    </section>
