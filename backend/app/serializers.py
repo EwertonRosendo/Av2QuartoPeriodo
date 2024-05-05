@@ -11,9 +11,9 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     
     def validate_user(self, username, email):
         if Users.objects.filter(username=username) or Users.objects.filter(email=email):
-            print('usuario já existe')
+            #print('usuario já existe')
             return False
-        print('usuario pode ser criado')
+        #print('usuario pode ser criado')
         return True
     
 class PasswordSerializer(serializers.HyperlinkedModelSerializer):

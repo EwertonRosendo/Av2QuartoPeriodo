@@ -32,10 +32,14 @@ class UserView(APIView):
         data = {'users':[
             
         ]}
+        
         for user in users:
-            data['users'].append({'id':user.id, 'email':user.email, 'username':user.username, 'password':user.password})
-
-        return Response(data)
+            data['users'].append({'id':user.user_id, 'email':user.email, 'username':user.username, 'password':user.password})
+        
+        if len(data['users'])==0:
+            return Response(data, status=status.HTTP_204_NO_CONTENT)
+        
+        return Response(data, status=status.HTTP_200_OK)
     
     #insert into users (username, email, password) values (?, ?, ?)
     @extend_schema(responses=UserSerializer)
@@ -45,9 +49,9 @@ class UserView(APIView):
 
         if serializer.is_valid() and serializer.validate_user(request.data['username'], request.data['email']):
             serializer.save()
-            return Response({'status':'conta criada'})
+            return Response({'status':'conta criada'},status=status.HTTP_201_CREATED)
         
-        return Response({'error':'email  ou username já cadastrados anteriormente'})
+        return Response({'error':'email  ou username já cadastrados anteriormente, ou campos vazios'}, status=status.HTTP_400_BAD_REQUEST)
     
     # select * from users where id = ?
     @extend_schema(responses=UserSerializer)
@@ -59,12 +63,13 @@ class UserView(APIView):
                     "email":"Luquinhas@com",
                     "username":"luquinhas123morango",
                     "password":"manobrown"
-}
-        user = Users.objects.get(id=data['id'])
+}       
+        
+        user = Users.objects.get(user_id=data['id'])
         serializer = UserSerializer(instance=user, data=data)
         if serializer.is_valid():
             serializer.save()
-            return Response({'status': 'deu bom'})
+            return Response({'status': 'deu bom'}, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     # delete from users where id = ?
@@ -95,7 +100,7 @@ class PasswordView(APIView):
         user = Users.objects.filter(username=username).first()
         id_user = user.user_id
 
-        print(id_user, user.email, user.password)
+        #print(id_user, user.email, user.password)
         
         PG = PasswordGenerator()
         PG.minlen = int(lenPassword)
@@ -108,7 +113,9 @@ class PasswordView(APIView):
         if serializer.is_valid():
             data = {'password':password, 'status':'deu bom'}
             serializer.save()
-            return Response(data)
+            return Response(data, status=status.HTTP_201_CREATED)
+        
+        return Response(data, status=status.HTTP_401_UNAUTHORIZED)
         
     def put(self, request, *args, **kwargs):
         #'lenghtPassword','password', 'id'
