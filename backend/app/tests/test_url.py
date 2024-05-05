@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse, resolve
-from app.views import UserView, PasswordView, Login, User
+from app.views import UserView, PasswordView, Login
 
 class TestUrls(TestCase):
     def test_users_url_resolves(self):
