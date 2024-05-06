@@ -13,12 +13,12 @@ export class LoginComponent implements OnInit {
     frase: 'cancelar'
    };
 
-  formUser: FormGroup = new FormGroup({});
+   formUser: FormGroup = new FormGroup({});
 
-  constructor(private formBuilder: FormBuilder, private passService: PasswordsService) { }
-  
+   constructor(private formBuilder: FormBuilder, private passService: PasswordsService) { }
+   
   ngOnInit() {
-    
+      
     this.createFormUser(new User());
     //this.getPasswords();
     //this.getUsers;
