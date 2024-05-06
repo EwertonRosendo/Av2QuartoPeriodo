@@ -141,7 +141,7 @@ class Login(APIView):
         
         if user and password==user.password:
             # Se o usuário existe e a senha corresponde, considere o login bem-sucedido
-            return Response({'status': 'Login bem-sucedido','username':user.username})
+            return Response({'status': 'Login bem-sucedido','username':user.username}, status=status.HTTP_202_ACCEPTED)
         else:
             # Caso contrário, retorne uma resposta indicando falha no login
             return Response({'error': 'Credenciais inválidas'}, status=status.HTTP_401_UNAUTHORIZED)

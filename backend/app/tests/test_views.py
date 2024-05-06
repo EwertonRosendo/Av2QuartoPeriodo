@@ -41,3 +41,22 @@ class TestViews(TestSetUp):
 
         res = self.client.post(self.password_url, data, format='json')
         self.assertEqual(res.status_code, 201)
+
+    def test_user_flow(self):
+        resCadastro = self.client.post(self.users_url, self.data, format='json')
+
+        if resCadastro.status_code == 201:
+            data = {'username':'email',
+                    'password':'password'}
+            resLogin = self.client.post(self.login_url, data, format='json')
+
+            if resLogin.status_code != 201:
+                data = {
+                    'lenghtPassword':8,
+                    'username':'email'
+                    }
+                
+                resData = self.client.post(self.password_url, data, format='json')
+
+        self.assertEqual(resData.status_code, 201)
+
