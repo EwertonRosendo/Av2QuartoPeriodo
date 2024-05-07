@@ -19,12 +19,14 @@ describe('LoginComponent', () => {
   })); 
 
   it("verifica se o campo do email está vazio", () => {
-    const emailElement: HTMLInputElement = fixture.debugElement.nativeElement.querySelector('#email');
-    //emailElement.value = '123'; // Definir o campo de e-mail como vazio
-    //emailElement.dispatchEvent(new Event('input')); // Emitir um evento de input
-  
-    fixture.detectChanges();   
-    expect(componentInstance.formUser.get('email')?.value).toEqual(''); // Verificar se o campo de e-mail está vazio
+    let emailElement: HTMLInputElement = fixture.debugElement.nativeElement.querySelector('#email');
+    emailElement.value = ''; // Definir o campo de e-mail como vazio
+    emailElement.dispatchEvent(new Event('input')); // Emitir um evento de input
+    console.log(emailElement.value)
+    
+      
+
+    expect(emailElement.value).toEqual(''); // Verificar se o campo de e-mail está vazio
   });
   
 });
