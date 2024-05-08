@@ -13,8 +13,8 @@
               </div>
           
               <div class="escolha">
-                <input type="submit" class="Salvo" value="{{textodois.frase}}">
-                <a href="#" class="Cancelo">{{texto.frase}}</a>
+                <input type="submit" class="Salvo" value="Salvar">
+                <a href="#" class="Cancelo">Cancelar</a>
               </div>
         
          </form>
@@ -31,7 +31,7 @@
           
           
         </tr>
-        <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 4, currentPage: pPass } ">
+        <tr *ngFor="let password of listPassword | paginate: { itemsPerPage: 7, currentPage: pPass } ">
           <td>{{password['id']}}</td>
           <td>{{password['password']}}</td>
           <td>{{password['lenght']}}</td>
