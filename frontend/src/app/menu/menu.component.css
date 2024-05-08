@@ -1,0 +1,24 @@
+.menu {
+    height: 70px;
+    background-color: #333; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.menu .item{
+    padding: 15px;
+    border-radius: 10px;
+}
+.menu .item:hover{
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2px);
+    background-color: #333;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+}
