@@ -13,6 +13,7 @@ import { CamelCasePipe } from './camel-case.pipe';
 import { LowerPipe } from './lower.pipe';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -26,6 +27,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     LowerPipe,
     LoginComponent,
     CadastroComponent,
+    MenuComponent,
     
     
     

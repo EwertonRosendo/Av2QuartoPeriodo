@@ -1,15 +1,7 @@
 
 <body>
   <section>
-    <Header>
-      <div class="menu">
-          <div class="item"><h3><a routerLink="/home"> Home</a></h3></div>
-          <div class="item"><h3><a routerLink="/login">Login</a></h3></div>
-          <div class="item"><h3><a routerLink="/cadastro">Cadastro</a></h3></div>
-          <div class="item"><h3><a routerLink="/localizacao">Localizacao</a></h3></div>
-          <div class="item"><h3><a routerLink="/sobre">Sobre</a></h3></div>            
-      </div>
-  </Header>
+    <app-menu></app-menu>
           <div class="center">
           <div class="form-box">
               <div class="form-value">
@@ -25,7 +17,7 @@
                           <input type="password" id="senha" formControlName="passwordUser" >
                           <label for="">Password</label>
                       </div>
-                      <button type="submit" >Log in</button>
+                      <button type="submit" id="button" >Log in</button>
                       <div class="register">
                           <p>Don't have a account <a routerLink="/cadastro">Register</a></p>
                       </div>
