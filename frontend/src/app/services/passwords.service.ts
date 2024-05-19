@@ -16,7 +16,7 @@ export class PasswordsService {
   public username:string = '';
 
   postPassword(lengthPassword: number) {
-    this.http.post('http://127.0.0.1:8000/password/', { lenghtPassword: lengthPassword, username:this.username })
+    this.http.post('0.0.0.0:8000/password/', { lenghtPassword: lengthPassword, username:this.username })
       .subscribe(
         (response) => {
           console.log('Requisição enviada com sucesso', response);
@@ -28,12 +28,12 @@ export class PasswordsService {
   }
 
   getPassword(): Observable<any> {
-    return this.http.get('http://127.0.0.1:8000/user/'+this.username+'/');
+    return this.http.get('0.0.0.0:8000/user/'+this.username+'/');
   }
   
 
   postUser(email:string, username:string, password:string){
-    this.http.post('http://127.0.0.1:8000/users/', { email: email,username: username, password:password })
+    this.http.post('0.0.0.0:8000/users/', { email: email,username: username, password:password })
       .subscribe(
         (response) => {
           console.log('Requisição enviada com sucesso', response);
@@ -46,11 +46,11 @@ export class PasswordsService {
   }
   
   getUser(): Observable<any> {
-    return this.http.get('http://127.0.0.1:8000/users/');
+    return this.http.get('0.0.0.0:8000/users/');
   }
 
   postLogin(username:string, password:string){
-    return this.http.post('http://127.0.0.1:8000/login/',{'username':username,'password':password})
+    return this.http.post('0.0.0.0:8000/login/',{'username':username,'password':password})
     .subscribe(
       (response) => {
         //console.log('Requisição enviada com sucesso', response);
@@ -64,28 +64,28 @@ export class PasswordsService {
     );
   }
   deletePassword(id: number) {
-    this.http.delete('http://127.0.0.1:8000/password/'+id+'/')
+    this.http.delete('0.0.0.0:8000/password/'+id+'/')
     .subscribe(() => console.log('deletado com sucesso'));
   }
 
 /*
   deletePassword(user_id: number): Observable<any> {
-    const url = `http://127.0.0.1:8000/password/${user_id}`;
+    const url = `0.0.0.0:8000/password/${user_id}`;
     return this.http.delete(url);
   }
 
   updatePassword(user_id: number, updatedData: any): Observable<any> {
-    const url = `http://127.0.0.1:8000/password/${user_id}`;
+    const url = `0.0.0.0:8000/password/${user_id}`;
     return this.http.put(url, updatedData);
   }
 
   deleteUser(id: number): Observable<any> {
-    const url = `http://127.0.0.1:8000/password/${id}`;
+    const url = `0.0.0.0:8000/password/${id}`;
     return this.http.delete(url);
   }
 
   updateUser(id: number, updatedData: any): Observable<any> {
-    const url = `http://127.0.0.1:8000/password/${id}`;
+    const url = `0.0.0.0:8000/password/${id}`;
     return this.http.put(url, updatedData);
   }*/
 
