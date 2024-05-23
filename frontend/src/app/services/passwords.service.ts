@@ -14,9 +14,10 @@ export class PasswordsService {
 
 
   public username:string = '';
+  public url:string = 'http://ec2-18-118-131-108.us-east-2.compute.amazonaws.com';
 
   postPassword(lengthPassword: number) {
-    this.http.post('ec2-18-118-131-108.us-east-2.compute.amazonaws.com:8000/password/', { lenghtPassword: lengthPassword, username:this.username })
+    this.http.post( this.url +':8000/password/', { lenghtPassword: lengthPassword, username:this.username })
       .subscribe(
         (response) => {
           console.log('Requisição enviada com sucesso', response);
@@ -28,12 +29,12 @@ export class PasswordsService {
   }
 
   getPassword(): Observable<any> {
-    return this.http.get('ec2-18-118-131-108.us-east-2.compute.amazonaws.com:8000/user/'+this.username+'/');
+    return this.http.get(this.url+':8000/user/'+this.username+'/');
   }
   
 
   postUser(email:string, username:string, password:string){
-    this.http.post('ec2-18-118-131-108.us-east-2.compute.amazonaws.com:8000/users/', { email: email,username: username, password:password })
+    this.http.post(this.url+':8000/users/', { email: email,username: username, password:password })
       .subscribe(
         (response) => {
           console.log('Requisição enviada com sucesso', response);
@@ -46,11 +47,11 @@ export class PasswordsService {
   }
   
   getUser(): Observable<any> {
-    return this.http.get('ec2-18-118-131-108.us-east-2.compute.amazonaws.com:8000/users/');
+    return this.http.get(this.url+':8000/users/');
   }
 
   postLogin(username:string, password:string){
-    return this.http.post('ec2-18-118-131-108.us-east-2.compute.amazonaws.com:8000/login/',{'username':username,'password':password})
+    return this.http.post(this.url+':8000/login/',{'username':username,'password':password})
     .subscribe(
       (response) => {
         //console.log('Requisição enviada com sucesso', response);
@@ -64,7 +65,7 @@ export class PasswordsService {
     );
   }
   deletePassword(id: number) {
-    this.http.delete('ec2-18-118-131-108.us-east-2.compute.amazonaws.com:8000/password/'+id+'/')
+    this.http.delete(this.url + ':8000/password/'+id+'/')
     .subscribe(() => console.log('deletado com sucesso'));
   }
 

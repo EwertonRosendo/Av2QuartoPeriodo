@@ -1,0 +1,48 @@
+docker build --rm -f frontend/Dockerfile -t angular-app:v1 frontend
+
+docker run --rm -d -p 80:80 angular-app:v1
+
+docker ps
+
+docker stop elegant_cerf
+
+
+----------------------
+
+backend
+
+FROM python:3.11.9
+
+WORKDIR /app
+
+COPY requirements.txt requirements.txt
+
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000", "--noreload"]
+
+
+docker build -t django_project .	
+
+docker run -d -p 8000:8000 django_project
+
+
+---------------------------------
+zabbix
+
+sudo docker compose up -d
+
+
+
+---------------
+banco de dados
+
+docker-compose up
+
+docker exec -it 39f1c683860d /bin/bash
+
+mysql -ppass -uroot
+
+python manage.py migrate
