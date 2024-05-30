@@ -1,0 +1,34 @@
+Infraestrutura Local
+Infraestrutura Físca:
+Rack de Servidor 12u R$ 660,00
+https://produto.mercadolivre.com.br/MLB-2200966407-rack-de-servidor-parede-12u-_JM?matt_tool=76735400&matt_word=&matt_source=google&matt_campaign_id=14303413823&matt_ad_group_id=125956126719&matt_match_type=&matt_network=g&matt_device=c&matt_creative=543112166789&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=392338008&matt_product_id=MLB2200966407&matt_product_partition_id=2270299237635&matt_target_id=aud-2009166904988:pla-2270299237635&cq_src=google_ads&cq_cmp=14303413823&cq_net=g&cq_plt=gp&cq_med=pla&gad_source=1&gclid=Cj0KCQjwpNuyBhCuARIsANJqL9OvuwrqL79Uo0z4gdRKD_3Mk7N1ODTFt6Yv2Oym3HZzJ1d6znbPhqwaAqrkEALw_wcB
+Fechadura Biometrica R$ 959,95
+https://www.amazon.com.br/FECHADURA-DIGITAL-EMBUTIR-BIOMETRIA-ESF-DE4000B/dp/B08HSMKRR8/ref=asc_df_B08HSMKRR8/?tag=googleshopp00-20&linkCode=df0&hvadid=379817630822&hvpos=&hvnetw=g&hvrand=1315988857802125735&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001625&hvtargid=pla-1155901243591&mcid=8cb464f1d94c3d2692270c8c52e83aab&th=1
+12 pontos
+
+Redes de Computadores:
+Cabos de Rede UTP 25 metros R$ 95,70
+https://www.amazon.com.br/Metros-Cabo-Cat5e-Furukawa-Sohoplus/dp/B0CFVXJWPB/ref=asc_df_B0CFVXJWPB/?tag=googleshopp00-20&linkCode=df0&hvadid=647556432235&hvpos=&hvnetw=g&hvrand=16843399460470190449&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001625&hvtargid=pla-2265709287090&psc=1&mcid=3d1ab390ccd03829b5bc1dec0e595d6c
+Switch Gerenciável Gigabit 24 portas R$ 1326,00
+https://www.amazon.com.br/SWITCH-GERENCI%C3%81VEL-GIGABIT-JETSTREAM-TL-SG3428/dp/B08MH7LN99/ref=asc_df_B08MH7LN99/?tag=googleshopp00-20&linkCode=df0&hvadid=379793387903&hvpos=&hvnetw=g&hvrand=5872358271779732402&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001625&hvtargid=pla-1157629037945&psc=1&mcid=dfdaee4129d333c6919e0e833e36c452
+
+Infraestrutura Elétrica:
+Nobreak R$50.594,28
+https://pbstore.com.br/nobreak-sms-keort-br-20-kva-e-s-220v-p-bat-int-28710.html?gad_source=1
+Gerador 25 KVA R$ 36729,07
+https://www.gensetec.com.br/geradores-de-energia-a-diesel/gerador-de-energia-toyama-td25sge3
+Aterramento
+
+Climatização: 
+ar-condicionado split inverter 12000 btus R$ 2483,08
+https://www.americanas.com.br/produto/7478936670/ar-condicionado-split-12-000-btus-lg-s3-uq12ja31k-ciclo-frio-dual-inverter-wi-fi-com-voice-ia-branco-220v?opn=YSMESP&offerId=65805f39cc553093857d3e62&epar=bp_pl_px_go_pmax_clima_3p_split_pa_2&gclsrc=aw.ds&gad_source=1&gclid=Cj0KCQjwu8uyBhC6ARIsAKwBGpSkGf1ZByxeLmAc8ZxZhUtL5jOieJW4qO2DNFivFuJwudolFNRWLXIaAmTWEALw_wcB&voltagem=220V&condition=NEW
+
+Equipamentos de Computação:
+
+Ambiente de internet:
+Roteador R$ 259,98
+https://www.amazon.com.br/TP-Link-Archer-AX12-dispositivos-Beamforming/dp/B0C4SN9V5K/ref=asc_df_B0C4SN9V5K/?tag=googleshopp00-20&linkCode=df0&hvadid=647427116610&hvpos=&hvnetw=g&hvrand=6039994497506884310&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001625&hvtargid=pla-2197651880083&psc=1&mcid=20b6eb26282e32eda47323c1ccd4df10
+Internet 2 GIGA R$ 355,99
+https://tim.com.br/rj/para-empresas/pequenas-e-medias-empresas/tim-ultrafibra
+
+1130+12+2800+2800+800+600+2=8144Watts
