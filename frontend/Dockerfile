@@ -1,8 +1,11 @@
-FROM node:19.5.0-alpine
+# Etapa de build
+FROM node:19.5.0-alpine as build
 WORKDIR /app
-COPY . .
+COPY package.json package-lock.json ./
 RUN npm install
+COPY . .
 RUN npm run build --prod
 
+# Etapa de produção
 FROM nginx:alpine
-COPY --from=node /app/dist/frontend /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
