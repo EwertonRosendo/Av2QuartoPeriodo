@@ -4,7 +4,7 @@ WORKDIR /app
 COPY frontend/package.json frontend/package-lock.json ./
 RUN npm install
 COPY . .
-RUN npm run build --prod
+RUN npm run build 
 
 # Etapa de produção
 FROM nginx:alpine
