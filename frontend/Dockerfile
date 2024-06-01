@@ -1,5 +1,5 @@
 # Etapa de build
-FROM node:19.5.0-alpine as build
+FROM node:latest as node
 WORKDIR /app
 COPY frontend/package.json frontend/package-lock.json ./
 COPY . .
