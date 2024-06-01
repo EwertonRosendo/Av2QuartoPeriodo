@@ -2,6 +2,9 @@
 FROM node:latest as build
 WORKDIR /app
 
+COPY package*.json ./
+ADD package*.json ./
+
 RUN npm install
 COPY . .
 RUN npm run build --prod
