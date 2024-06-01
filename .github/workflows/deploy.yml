@@ -19,11 +19,5 @@ jobs:
         REMOTE_HOST: "ec2-52-15-86-21.us-east-2.compute.amazonaws.com" 
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu"
-        script: |
-          cd /home/ubuntu/project
-          sudo docker stop $(docker ps -aq)
-          sudo docker rm -v -f $(docker ps -qa)
-          sudo docker rmi -f $(docker images -qa)
-          sudo docker system prune -a
-          sudo docker-compose up -d --build
+        
           
