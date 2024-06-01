@@ -20,5 +20,8 @@ jobs:
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu"
         script: |
-        docker rm -v -f $(docker ps -qa)
+          cd /home/ubuntu/project
+          docker rm -v -f $(docker ps -qa)
+          docker rmi -f $(docker images -qa)
+          docker-compose up -d --build
           
