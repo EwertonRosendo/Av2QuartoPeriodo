@@ -8,4 +8,4 @@ RUN npm run build
 
 # Etapa de produção
 FROM nginx:alpine
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/frontend /usr/share/nginx/html
