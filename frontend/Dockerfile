@@ -2,8 +2,8 @@
 FROM node:19.5.0-alpine as build
 WORKDIR /app
 COPY frontend/package.json frontend/package-lock.json ./
-RUN npm install
 COPY . .
+RUN npm install
 RUN npm run build 
 
 # Etapa de produção
