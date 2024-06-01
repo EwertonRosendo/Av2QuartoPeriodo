@@ -21,7 +21,9 @@ jobs:
         TARGET: "/home/ubuntu"
         script: |
           cd /home/ubuntu/project
-          docker rm -v -f $(docker ps -qa)
-          docker rmi -f $(docker images -qa)
-          docker-compose up -d --build
+          sudo docker stop $(docker ps -aq)
+          sudo docker rm -v -f $(docker ps -qa)
+          sudo docker rmi -f $(docker images -qa)
+          sudo docker system prune -a
+          sudo docker-compose up -d --build
           
