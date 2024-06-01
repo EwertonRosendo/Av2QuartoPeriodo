@@ -2,7 +2,8 @@ name: Push-to-EC2
 on:
   push:
     branches:
-      - main
+      - TudoOk
+
 jobs:
   deploy:
     name: Deploy to EC2
@@ -16,7 +17,7 @@ jobs:
       env:
         SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
         SOURCE: "./"
-        REMOTE_HOST: "ec2-18-118-131-108.us-east-2.compute.amazonaws.com" 
+        REMOTE_HOST: "ec2-52-15-86-21.us-east-2.compute.amazonaws.com" 
         REMOTE_USER: "ubuntu"
         TARGET: "/home/ubuntu"
           
