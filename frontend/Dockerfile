@@ -1,5 +1,5 @@
 # Etapa de build
-FROM node:latest as build
+FROM node:19.5.0-alpine as build
 WORKDIR /app
 
 COPY package*.json ./
