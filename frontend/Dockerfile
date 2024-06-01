@@ -1,10 +1,7 @@
 # Etapa de build
-FROM node:19.5.0-alpine as build
+FROM node:latest as build
 WORKDIR /app
-
-COPY package*.json ./
-ADD package*.json ./
-
+COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
 RUN npm run build --prod
