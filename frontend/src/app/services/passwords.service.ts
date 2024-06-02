@@ -14,7 +14,7 @@ export class PasswordsService {
 
 
   public username:string = '';
-  public url:string = 'http://ec2-3-144-105-160.us-east-2.compute.amazonaws.com'
+  public url:string = 'http://ec2-3-12-34-238.us-east-2.compute.amazonaws.com'
   postPassword(lengthPassword: number) {
     this.http.post( this.url +':8000/password/', { lenghtPassword: lengthPassword, username:this.username })
       .subscribe(
