@@ -1,11 +1,8 @@
-# Etapa de build
 FROM node:latest as node
 WORKDIR /app
-COPY frontend/package.json frontend/package-lock.json ./
 COPY . .
 RUN npm install
-RUN npm run build 
+RUN npm run build --prod
 
-# Etapa de produção
 FROM nginx:alpine
-#COPY --from=node /app/dist/frontend /usr/share/nginx/html
+COPY --from=node /app/dist/frontend /usr/share/nginx/html
